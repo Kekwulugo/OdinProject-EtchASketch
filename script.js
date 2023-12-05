@@ -1,22 +1,28 @@
-let num = prompt("How big would like the grid to be?");
+const button = document.querySelector(".btn");
+const div = document.querySelector("div");
 
-let container = document.querySelector(".container");
+let num = "";
 
-// create grid based on user input
+button.addEventListener("click", function(){
 
-for (let i = 1; i<=num; i++){
- let newDiv = document.createElement("div");
- newDiv.setAttribute("class","new-div");
- newDiv.textContent = i;
- container.appendChild(newDiv);
+ num = prompt("How big would like the grid to be?");
+ 
+ let container = document.querySelector(".container");
+ 
+ for (let i = 1; i<=num*num; i++){
+  let newDiv = document.createElement("div");
+  newDiv.setAttribute("class","ndiv");
+  newDiv.textContent = i;
+  container.appendChild(newDiv);
 }
 
-let gridItem = document.querySelectorAll(".new-div");
-
-//event listener for mouse hover
-gridItem.addEventListener("click", function(){
- gridItem.style.backgroundColor = "red";
 });
+
+//not working
+
+div.childNodes.forEach(item => item.addEventListener("onmouseover",function (){
+ item.style.backgroundColor = "yellow";
+}));
 
 
 
