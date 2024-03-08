@@ -2,6 +2,7 @@
  display: flex;
  flex-direction: row;
  flex-wrap: wrap;
+ width: 960px;
 }
 
 .ndiv{
@@ -14,4 +15,8 @@
 
 .ndiv:hover{
   background-color: red;
+}
+
+.hover{
+  background-color: aquamarine;
 }
