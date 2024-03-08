@@ -13,10 +13,6 @@
   height: 20px;
 }
 
-.ndiv:hover{
-  background-color: red;
-}
-
 .hover{
   background-color: aquamarine;
 }
