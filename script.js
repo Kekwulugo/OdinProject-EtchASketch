@@ -26,7 +26,7 @@ button.addEventListener("click", function(){
 // Add hover affect, by adding a hover class
 
 const gridDivs = document.querySelectorAll(".ndiv");
-Array.from(gridDivs).forEach(item => item.addEventListener("onmouseover",function(){
+Array.from(gridDivs).forEach(item => item.addEventListener("mouseover",function(){
   item.classList.add("hover");
 }))
 
