@@ -5,7 +5,7 @@ let container = document.querySelector(".container");
 
 let num = "";
 
-button.addEventListener("mouseover", function(){
+button.addEventListener("click", function(){
 
  num = prompt("How big would you like the grid to be?");
 
@@ -27,9 +27,10 @@ button.addEventListener("mouseover", function(){
 
 const gridDivs = document.querySelectorAll(".ndiv");
 
-gridDivs.forEach(item => item.addEventListener("mouseover",function(){
+container.forEach(item => item.addEventListener("mouseover", function(){
   item.classList.add("hover");
-}))
+
+}));
 
 
 
