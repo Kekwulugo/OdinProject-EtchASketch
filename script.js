@@ -5,7 +5,7 @@ let container = document.querySelector(".container");
 
 let num = "";
 
-button.addEventListener("click", function(){
+button.addEventListener("mouseover", function(){
 
  num = prompt("How big would you like the grid to be?");
 
