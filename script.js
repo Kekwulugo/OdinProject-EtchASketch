@@ -27,7 +27,7 @@ button.addEventListener("click", function(){
 
 const gridDivs = document.querySelectorAll(".ndiv");
 
-container.forEach(item => item.addEventListener("mouseover", function(){
+gridDivs.forEach(item => item.addEventListener("mouseleave", function(){
   item.classList.add("hover");
 
 }));
