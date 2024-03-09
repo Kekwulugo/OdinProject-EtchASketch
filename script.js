@@ -1,36 +1,46 @@
 // Get elements from DOM
-const button = document.querySelector(".btn");
-const div = document.querySelector("div");
+let button = document.querySelector(".btn");
 let container = document.querySelector(".container");
 
 let num = "";
 
-button.addEventListener("click", function(){
+function createGrid () {
 
- num = prompt("How big would you like the grid to be?");
+  
+  num = prompt("Please indicate the dimensions of the grid - ? X ?")
 
- // clear previous grid
- container.innerHTML = "";
- 
- // Create cells for number indicated by user
- 
- for (let i = 1; i<=num*num; i++){
+  //container.style.border = "1px solid black";
+  container.innerHTML = "";
+  container.style.width= "960px";
+
+
+  //determine size of cells
+  let size = 960/num;
+  
+
+// create cells
+  for (let i = 1; i<=num*num; i++){
   let newDiv = document.createElement("div");
   newDiv.setAttribute("class","ndiv");
-  newDiv.textContent = i;
+  newDiv.style.width = size + "px";
+  newDiv.style.height = size + "px";
+  //newDiv.style.border = "1px solid black";
+  
+
+  //setup event listener for cells
+  newDiv.addEventListener("mouseover",() => {
+    newDiv.classList.add("hover");
+  })
+
+
   container.appendChild(newDiv);
+
+};
 }
 
-});
+// user clicks button to generate grid
+button.onclick = createGrid;
 
-// Add hover affect, by adding a hover class
-
-const gridDivs = document.querySelectorAll(".ndiv");
-
-gridDivs.forEach(item => item.addEventListener("mouseleave", function(){
-  item.classList.add("hover");
-
-}));
 
 
 
