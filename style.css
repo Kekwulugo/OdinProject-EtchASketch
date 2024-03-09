@@ -2,6 +2,11 @@ body{
   background: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
 }
 
+h1{
+  text-align: center;
+  color: white;
+}
+
 .wrapper{
   text-align: center;
   margin: 20px;
@@ -22,9 +27,10 @@ button{
   flex-direction: row;
   margin: auto;
   justify-content: stretch;
+
 }
 
+/*.ndiv{
+  border: 1px solid black;
+}*/
 
-.hover{
-  background-color: aquamarine;
-}
