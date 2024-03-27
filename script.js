@@ -9,6 +9,11 @@ function createGrid () {
   
   num = prompt("Please indicate the dimensions of the grid - ? X ?")
 
+  if (num > 100){
+    alert("Sorry, please choose a number less 100");
+    
+  } else {
+
   container.innerHTML = "";
   container.style.width = "960px";
   container.style.border = "1px solid black";
@@ -39,6 +44,7 @@ function createGrid () {
 
     }
   }
+}
   
 };
 
